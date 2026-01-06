@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Neon Profile Card</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+}
+
+/* Card */
+.profile-card{
+    width:340px;
+    padding:30px;
+    border-radius:25px;
+    background:#0b1320;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+}
+
+/* Neon Border Animation */
+.profile-card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    background:linear-gradient(90deg, #00f2ff, #ff00f7, #00f2ff);
+    z-index:-1;
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate{
+    0%{ transform:rotate(0deg); }
+    100%{ transform:rotate(360deg); }
+}
+
+/* Profile Image */
+.profile-card img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:4px solid #00f2ff;
+    margin-bottom:15px;
+}
+
+/* Text */
+.profile-card h2{
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.profile-card h4{
+    font-size:14px;
+    color:#00f2ff;
+    margin-bottom:15px;
+}
+
+.profile-card p{
+    font-size:14px;
+    opacity:0.8;
+    margin-bottom:20px;
+}
+
+/* Social Icons */
+.social a{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    border-radius:50%;
+    margin:0 6px;
+    background:#111;
+    color:#00f2ff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social a:hover{
+    background:#00f2ff;
+    color:#000;
+    box-shadow:0 0 15px #00f2ff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="profile-card">
+    <img src="image.jpeg" alt="Profile">
+    <h2>Md. Sajid Hasan</h2>
+    <h4>Web Developer</h4>
+    <p>
+        Passionate about creating modern, interactive, and
+        user-friendly web designs using HTML & CSS.
+    </p>
+
+    <div class="social">
+        <a href="https://www.facebook.com/share/1AGbxnQ6zY/">F</a>
+        <a href="https://x.com/SajidHasan72">X</a>
+        <a href="https://www.instagram.com/sajid_hasan97?igsh=MTJqdHcxODEyN2h1eA==">I</a>
+        <a href="https://bd.linkedin.com/in/sajid-hasan-aba939393">L</a>
+    </div>
+</div>
+
+</body>
+</html>
